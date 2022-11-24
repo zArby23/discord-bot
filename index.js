@@ -2,7 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 // const Discord = require("discord.js");
 const config = require("./config.json");
-const {Client, GatewayIntentBits} = require('discord.js');
+const {Client, Events, Collection, GatewayIntentBits} = require('discord.js');
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages
@@ -15,7 +15,7 @@ client.once(Events.ClientReady, c => {
 client.commands = new Collection();
 
 const commandsPath = path.join(__dirname, 'commands');
-const commandsFiles = fsreaddirSync(commandsPath).filter(file => file.endsWith('.js'));
+const commandsFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 
 for (const file of commandsFiles){
     const filePath = path.join(commandsPath, file)

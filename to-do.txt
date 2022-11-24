@@ -1,0 +1,4 @@
+1. Fix the error when using a slash command.
+2. Add more commands.
+3. Explore the documentation of "discord.js"
+4. See the tutorials for Node.js

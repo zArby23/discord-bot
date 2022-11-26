@@ -21,9 +21,10 @@ module.exports = {
                     ),
 
     async execute(interaction){
+        const user = interaction.options.getUser('member');
+        
         if(interaction.options.getSubcommand === "user"){
-            const user = interaction.options.getUser('member');
-
+            
             if (user){
                 await interaction.reply(`Username: ${user.username}\nID: ${user.id}`);
             } else {

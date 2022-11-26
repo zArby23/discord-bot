@@ -2,3 +2,4 @@
 2. Add more commands.
 3. Explore the documentation of "discord.js"
 4. See the tutorials for Node.js
+5. Fix the error where the application does not respond when using "/info" slash command.

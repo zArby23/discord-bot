@@ -3,7 +3,7 @@ const { SlashCommandBuilder } = require("discord.js");
 
 module.exports = {
     data:   new SlashCommandBuilder()
-            .setName('botping')
+            .setName('botping') // The name can't have an upper case (A-Z) nor symbols.
             .setDescription('How long takes the bot to respond? You can look up that with this command!'),
     async execute(interaction){
         const sent = await interaction.deferReply({fetchReply: true});

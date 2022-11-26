@@ -3,7 +3,7 @@ const path = require('node:path');
 // const Discord = require("discord.js");
 const config = require("./config.json");
 
-const {Client, Events, Collection, GatewayIntentBits} = require('discord.js');
+const {Client, Collection, GatewayIntentBits} = require('discord.js');
 
 const client = new Client({
     intents: [

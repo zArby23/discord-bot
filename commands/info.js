@@ -23,7 +23,7 @@ module.exports = {
     async execute(interaction){
         const user = interaction.options.getUser('member');
         
-        if(interaction.options.getSubcommand === "user"){
+        if(interaction.options.getSubcommand() === "user"){
             
             if (user){
                 await interaction.reply(`Username: ${user.username}\nID: ${user.id}`);
@@ -31,7 +31,7 @@ module.exports = {
                 await interaction.reply(`Your username: ${interaction.user.username}\nID: ${interaction.user.id}`);
             }
 
-        } else if (interaction.options.getSubcommand === 'server'){
+        } else if (interaction.options.getSubcommand() === 'server'){
             await interaction.reply(`Server name: ${interaction.guild.name}\nTotal members: ${interaction.guild.memberCount}`)
         }
     },

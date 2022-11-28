@@ -28,3 +28,7 @@ const rest = new REST({
         console.error(error)
     }
 })();
+
+// rest.delete(Routes.applicationCommand(clientId, "1046201130226556951"))
+//     .then(() => console.log('Successfully deleted application command'))
+//     .catch(console.error);

@@ -11,6 +11,7 @@
 
 **5.** ~~(Fix the error where the application does not respond when using "/info" slash command.)~~ > ***Fixed!***
 
-**6.** Make the "Click me!" button can be activated multiple times.
+**6.** ~~(Make the "Click me!" button can be activated multiple times.)~~
+    6.1 **It can be activated multiple times**, I just have to figure out how to get another message when clicked! 
 
-**7.** Add another button and make it work.
+**7.** ~~(Add another button and make it work.)~~ > ***Done!***

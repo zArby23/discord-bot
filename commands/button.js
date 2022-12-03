@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, messageLink } = require("discord.js");
+const { SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
 // const {client} = require('../index.js')
 
 module.exports = {
@@ -21,14 +21,17 @@ module.exports = {
             
             await interaction.reply({content: 'I think you should...', components: [row]})
 
-            const filter = (i) => i.customId === ('primary'/*|| 'secondary'*/) && i.user.id === '1036983677839736882' //message.author.id
+            // const filter = (i) => i.customId === ('primary'/*|| 'secondary'*/) && i.user.id === '1036983677839736882' //message.author.id
 
-            const collector = interaction.channel.createMessageComponentCollector({ filter, time: 15000 });
+            const collector = interaction.channel.createMessageComponentCollector({ time: 15000 });
 
             collector.on('collect', async i => {
+                if(i.member.id !== interaction.user.id){
+                    return (i.reply({content: `You're not allowed to click this!`, ephemeral: true}))
+                }
                 await i.update({ content: 'The button was clicked! ~~No more interactions for you this time!~~', components: [] })
                 
             });
-            collector.on('end', collected => console.log(`Collected ${collected.size} items`));
+            collector.on('end', collected => console.log(`Collected ${collected.size} item(s)`));
         } 
 }

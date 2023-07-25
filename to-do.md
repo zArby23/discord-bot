@@ -17,7 +17,7 @@
 
 **7.** ~~(Add another button and make it work.)~~ > ***Done!***
 
-**8.** Fix error while trying to interact with the select menu (The options launches an erro:
+**8.** Fix error while trying to interact with the select menu (The options launches an error:
 ```
 Error executing menu
 TypeError: Cannot read properties of undefined (reading '0')
